@@ -39,7 +39,7 @@ function BalanceMonitor({ address }) {
         const interval = setInterval(updateBalance, 5000);
         updateBalance();
         return () => clearInterval(interval);
-      }, []);
+      }, [address]);
     
     if (balance === null) {
         return (
